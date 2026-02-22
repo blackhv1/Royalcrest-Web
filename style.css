@@ -1,0 +1,299 @@
+/* ===============================
+   Royalcrest RP - Dark Royal Theme
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#0b0b0d;
+    color:#e6e6e6;
+    line-height:1.7;
+}
+
+/* ===== Scroll ===== */
+html{
+    scroll-behavior:smooth;
+}
+
+/* ===== Header ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#111114;
+    border-bottom:3px solid #8b0000;
+    box-shadow:0 0 25px rgba(139,0,0,.3);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+    color:#b30000;
+    letter-spacing:1px;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#ccc;
+    transition:.3s;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ff1a1a;
+}
+
+/* ===== Hero ===== */
+.hero{
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.9)),
+    radial-gradient(circle at center, #1a0000 0%, #0b0b0d 70%);
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:#cc0000;
+}
+
+.hero p{
+    color:#aaa;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* ===== Sections ===== */
+.section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.section-title{
+    font-size:34px;
+    margin-bottom:20px;
+    color:#b30000;
+}
+
+.section-desc{
+    color:#999;
+    margin-bottom:50px;
+}
+
+/* ===== Buttons ===== */
+.btn, .btn-glow{
+    display:inline-block;
+    padding:12px 28px;
+    background:linear-gradient(45deg,#660000,#990000);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(150,0,0,.5);
+    font-weight:600;
+}
+
+.btn:hover, .btn-glow:hover{
+    background:linear-gradient(45deg,#990000,#cc0000);
+    box-shadow:0 0 30px rgba(200,0,0,.8);
+    transform:translateY(-3px);
+}
+
+/* ===== Cards General ===== */
+.card{
+    background:#141417;
+    border:1px solid #1f1f25;
+    border-radius:15px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    border:1px solid #990000;
+    box-shadow:0 0 25px rgba(150,0,0,.4);
+    transform:translateY(-8px);
+}
+
+/* ===== Team Section ===== */
+.team-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.team-card{
+    background:#141417;
+    border:1px solid #1f1f25;
+    width:250px;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    position:relative;
+    transition:.3s;
+}
+
+.team-card:hover{
+    border:1px solid #990000;
+    box-shadow:0 0 30px rgba(150,0,0,.5);
+    transform:translateY(-10px);
+}
+
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin:0 auto 15px;
+    background:radial-gradient(circle,#330000,#0b0b0d);
+    border:3px solid #8b0000;
+    box-shadow:0 0 20px rgba(150,0,0,.6);
+}
+
+.role-badge{
+    position:absolute;
+    top:110px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#8b0000;
+    color:#fff;
+    padding:6px 18px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* ===== Jobs Section ===== */
+.jobs-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.job-card{
+    background:#141417;
+    border:1px solid #1f1f25;
+    width:300px;
+    padding:45px 30px;
+    border-radius:25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.job-card:hover{
+    border:1px solid #990000;
+    box-shadow:0 0 35px rgba(150,0,0,.6);
+    transform:translateY(-12px);
+}
+
+.job-icon{
+    font-size:55px;
+    color:#b30000;
+    margin-bottom:20px;
+}
+
+/* ===== Forms ===== */
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    background:#121216;
+    border:1px solid #2a2a33;
+    color:#f0f0f0;
+    border-radius:8px;
+    font-family:'Cairo',sans-serif;
+    transition:.3s;
+}
+
+input:focus, textarea:focus{
+    outline:none;
+    border:1px solid #990000;
+    box-shadow:0 0 10px rgba(150,0,0,.4);
+}
+
+/* ===== Tables (لوحة التحكم) ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+}
+
+th, td{
+    padding:12px;
+    border-bottom:1px solid #1f1f25;
+}
+
+th{
+    background:#111114;
+    color:#b30000;
+}
+
+/* ===== Footer ===== */
+footer{
+    background:#111114;
+    padding:30px;
+    text-align:center;
+    border-top:3px solid #8b0000;
+    color:#888;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.section, .hero, .team-card, .job-card{
+    animation:fadeInUp 1s ease;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .team-card, .job-card{
+        width:90%;
+    }
+}

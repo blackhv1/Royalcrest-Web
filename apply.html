@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Royalcrest RP - تقديم إدارة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">Royalcrest RP</div>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="server.html">السيرفر</a>
+<a href="rules.html">القوانين</a>
+<a href="apply.html">التقديم</a>
+<a href="dashboard.html">لوحة التحكم</a>
+</nav>
+</header>
+
+<section class="section">
+<h2 class="red">نموذج تقديم إدارة Royalcrest RP</h2>
+
+<form onsubmit="submitApp(event)">
+<input type="text" id="name" placeholder="اسمك داخل السيرفر" required>
+<textarea id="exp" placeholder="خبرتك السابقة" required></textarea>
+<button class="btn">إرسال الطلب</button>
+</form>
+
+</section>
+
+<footer>© 2026 Royalcrest RP</footer>
+
+<script>
+async function submitApp(e){
+e.preventDefault()
+await fetch('/apply',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({
+name:document.getElementById("name").value,
+experience:document.getElementById("exp").value
+})
+})
+alert("تم إرسال طلبك بنجاح 👑")
+}
+</script>
+
+</body>
+</html>

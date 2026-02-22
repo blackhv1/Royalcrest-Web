@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Royalcrest RP - لوحة التحكم</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">Royalcrest RP</div>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="server.html">السيرفر</a>
+<a href="rules.html">القوانين</a>
+<a href="apply.html">التقديم</a>
+<a href="dashboard.html">لوحة التحكم</a>
+</nav>
+</header>
+
+<section class="section">
+<h2 class="red">لوحة تحكم Royalcrest RP</h2>
+<div id="data">جارٍ التحميل...</div>
+</section>
+
+<footer>© 2026 Royalcrest RP</footer>
+
+<script>
+async function load(){
+try{
+const res = await fetch('/dashboard')
+const data = await res.json()
+document.getElementById("data").innerHTML =
+`<p>👤 ${data.user.username}</p>
+<p>💰 عدد التبرعات: ${data.donations.length}</p>
+<p>📋 طلبات الإدارة: ${data.applications.length}</p>`
+}catch{
+document.getElementById("data").innerText="يرجى تسجيل الدخول أولاً"
+}
+}
+load()
+</script>
+
+</body>
+</html>

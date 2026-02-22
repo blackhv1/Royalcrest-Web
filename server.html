@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Royalcrest RP - السيرفر</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">Royalcrest RP</div>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="server.html">السيرفر</a>
+<a href="rules.html">القوانين</a>
+<a href="apply.html">التقديم</a>
+<a href="dashboard.html">لوحة التحكم</a>
+</nav>
+</header>
+
+<section class="section">
+<h2 class="red">معلومات سيرفر Royalcrest RP</h2>
+<p>عدد اللاعبين المتصلين حالياً:</p>
+<h1 id="playerCount" class="red">...</h1>
+</section>
+
+<script>
+async function fetchPlayers(){
+try{
+const res = await fetch('/api/players')
+const data = await res.json()
+document.getElementById("playerCount").innerText = data.count
+}catch{
+document.getElementById("playerCount").innerText = "0"
+}
+}
+setInterval(fetchPlayers,5000)
+fetchPlayers()
+</script>
+
+</body>
+</html>
