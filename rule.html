@@ -18,17 +18,71 @@
 </nav>
 </header>
 
-<section class="section">
-<h2 class="red">قوانين Royalcrest RP</h2>
+   <section class="rules-wrapper">
 
-<div class="card">❌ يمنع الميتا غيمينغ</div>
-<div class="card">❌ يمنع الباور غيمينغ</div>
-<div class="card">❌ يمنع استغلال الثغرات</div>
-<div class="card">✔ احترام جميع اللاعبين والإدارة</div>
+    <div class="rules-header">
+        <h1>قوانين السيرفر</h1>
+        <p>يمكنك قراءة القوانين حسب تصنيفها</p>
 
+        <div class="rules-tabs">
+            <button class="tab-btn active">Server Rules</button>
+            <button class="tab-btn">Police Rules</button>
+            <button class="tab-btn">Crime Rules</button>
+        </div>
+    </div>
+
+    <div class="rules-card">
+
+        <div class="card-title">
+            <h2>قوانين المدينة</h2>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-btn">
+                <span class="plus">+</span>
+                اساسية
+            </button>
+            <div class="accordion-content">
+                <p>يمنع السب والشتم أو التقليل من احترام اللاعبين.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-btn">
+                <span class="plus">+</span>
+                الحياة الواقعية - RP
+            </button>
+            <div class="accordion-content">
+                <p>يجب الالتزام بالرول بلاي الواقعي وعدم كسر الشخصية.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-btn">
+                <span class="plus">+</span>
+                الحياة الجديدة
+            </button>
+            <div class="accordion-content">
+                <p>عند الموت يجب نسيان الأحداث السابقة بشكل كامل.</p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<footer>© 2026 Royalcrest RP</footer>
+<script>
+document.querySelectorAll(".accordion-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+        const content = this.nextElementSibling;
+        const plus = this.querySelector(".plus");
 
-</body>
-</html>
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            plus.textContent = "+";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            plus.textContent = "−";
+        }
+    });
+});
+</script>
